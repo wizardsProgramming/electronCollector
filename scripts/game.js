@@ -2,42 +2,42 @@
 
 const levels = [
         {
-          duration: 5,
+          duration: 15,
           backgroundSound: './sounds/game-music.mp3',
           clickSound: './sounds/collect.wav',
           particleShapes: ['circle', 'square', 'triangle'],
           pattern: 'wave',
         },
         {
-          duration: 5,
+          duration: 15,
           backgroundSound: './sounds/game-music.mp3',
           clickSound: './sounds/collect.wav',
           particleShapes: ['circle'],
           pattern: 'constellation',
         },
         {
-          duration: 5,
+          duration: 15,
           backgroundSound: './sounds/storm-ambient.mp3',
           clickSound: './sounds/electric-zap.wav',
           particleShapes: ['circle', 'triangle'],
           pattern: 'pulse'
         },
         {
-          duration: 5,
+          duration: 15,
           backgroundSound: './sounds/wind-ambience.mp3',
           clickSound: './sounds/whoosh.wav',
           particleShapes: ['circle', 'square'],
           pattern: 'drift'
         },
         {
-          duration: 5,
+          duration: 15,
           backgroundSound: './sounds/space-buzz.mp3',
           clickSound: './sounds/collect-deep.wav',
           particleShapes: ['circle', 'triangle', 'square'],
           pattern: 'dense-blur'
         },
         {
-          duration: 5,
+          duration: 15,
           backgroundSound: './sounds/tech-glitch.mp3',
           clickSound: './sounds/glitch-pop.wav',
           particleShapes: ['square', 'triangle'],
