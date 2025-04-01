@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Star Particle Collection Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans overflow-hidden">
+
+  <!-- Score display -->
+  <div id="score" class="absolute top-4 w-full text-center text-xl font-bold transition-colors z-10">Username: filler | Points: 0 | Time: 60</div>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="absolute inset-0 bg-black flex flex-col justify-center items-center z-30">
+    <h1 class="text-4xl font-bold mb-4">Enter Your Username</h1>
+    <input id="username" type="text" placeholder="Username" class="p-2 rounded text-black mb-4 w-64 text-center" />
+    <button id="start-btn" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-200 transition">Start Game</button>
+  </div>
+
+  <!-- Shop Modal (shown after each level) -->
+  <div id="shop-modal" class="hidden absolute inset-0 bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center p-6 text-white">
+    <h2 class="text-3xl font-bold mb-4">Upgrade Shop</h2>
+
+    <div class="mb-2 text-xl" id="coins">Coins: 0</div>
+
+    <div class="grid gap-4 w-full max-w-md">
+      <button id="upgrade-radius" class="bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded shadow transition">
+        Increase Mouse Radius (+10%) (Max 5)- <span id="radius-cost">10</span> Coins
+      </button>
+      <button id="upgrade-density" class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded shadow transition">
+        Increase Particle Density (+1%) - <span id="density-cost">15</span> Coins
+      </button>
+    </div>
+
+    <button id="start-next-level" class="mt-6 bg-green-500 hover:bg-green-400 px-6 py-3 rounded text-black">Start Next Level</button>
+  </div>
+
+  <!-- Level Complete Screen -->
+  <div id="game-over" class="hidden absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-400 flex flex-col justify-center items-center z-20">
+    <div class="text-3xl font-bold mb-4">Level Complete!</div>
+    <button id="next-level" class="bg-white text-black px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-200 transition">Next Level</button>
+  </div>
+
+  <!-- Game Canvas -->
+  <canvas id="canvas" class="block"></canvas>
+
+  <!-- Sounds -->
+  <audio id="collect-sound" src="./sounds/collect.wav"></audio>
+  <audio id="background-music" src="./sounds/game-music.mp3" loop></audio>
+
+  <!-- Game Script -->
+  <script src="scripts/game.js" defer></script>
+</body>
+</html>
